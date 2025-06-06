@@ -1,0 +1,42 @@
+import { useEffect, useState } from 'react';
+
+const Versiculo = () => {
+  const [versiculo, setVersiculo] = useState(null);
+
+  useEffect(() => {
+    // Exemplo de versículo fixo; você pode trocar por outro
+    fetch('https://bible-api.com/john%203:16')
+      .then(res => {
+        if (!res.ok) throw new Error('Erro ao buscar versículo');
+        return res.json();
+      })
+      .then(data => {
+        setVersiculo({
+          text: data.text,
+          reference: data.reference,
+        });
+      })
+      .catch(() => {
+        setVersiculo({
+          text: 'Não foi possível carregar o versículo do dia.',
+          reference: '',
+        });
+      });
+  }, []);
+
+  return (
+    <section className="p-6 bg-gray-100 text-center">
+      <h2 className="text-2xl font-bold mb-2">Versículo do Dia</h2>
+      {versiculo ? (
+        <>
+          <p className="italic text-lg">“{versiculo.text}”</p>
+          <p className="text-sm text-gray-600 mt-1">{versiculo.reference}</p>
+        </>
+      ) : (
+        <p>Carregando...</p>
+      )}
+    </section>
+  );
+};
+
+export default Versiculo;

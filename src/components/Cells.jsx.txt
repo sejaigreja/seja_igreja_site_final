@@ -1,0 +1,13 @@
+const Cells = () => (
+  <section className="p-6 bg-gray-100 text-center">
+    <h2 className="text-2xl font-bold mb-2">Células</h2>
+    <p className="text-lg">
+      As células são pequenos grupos que se reúnem nas casas com o propósito de
+      comunhão, estudo da Bíblia e crescimento espiritual. Elas são a base do
+      nosso relacionamento cristão fora das paredes da igreja. Participe de uma
+      célula perto de você!
+    </p>
+  </section>
+);
+
+export default Cells;

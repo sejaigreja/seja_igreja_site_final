@@ -1,0 +1,12 @@
+const About = () => (
+  <section className="p-6 bg-gray-50 text-center">
+    <h2 className="text-2xl font-bold mb-2">Sobre Nós</h2>
+    <p className="text-lg">
+      Somos uma comunidade evangélica comprometida com a pregação do Evangelho, o
+      discipulado e o amor ao próximo. Nossa missão é ser uma igreja relevante,
+      fundamentada na Palavra de Deus e sensível às necessidades da sociedade.
+    </p>
+  </section>
+);
+
+export default About;

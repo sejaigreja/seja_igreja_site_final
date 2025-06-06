@@ -1,316 +1,140 @@
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Comunidade Evangélica - Seja Igreja</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        :root {
-            --roxo: #6861ec;
-            --azul: #2684eb;
-            --preto: #000000;
-        }
-        
-        body {
-            background: linear-gradient(to bottom, #111, #000);
-            color: white;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        .bg-roxo {
-            background-color: var(--roxo);
-        }
-        
-        .bg-azul {
-            background-color: var(--azul);
-        }
-        
-        .text-roxo {
-            color: var(--roxo);
-        }
-        
-        .text-azul {
-            color: var(--azul);
-        }
-        
-        .banner-gradient {
-            background: linear-gradient(135deg, var(--roxo), var(--azul));
-        }
-        
-        .card-bg {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              roxo: "#6861ec",
+              azul: "#2684eb",
+              fundo: "#0e0e0e",
+            },
+          },
+        },
+      };
+    </script>
+    <script defer src="versiculo.js"></script>
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXX", {
+        anonymize_ip: true,
+      });
+    </script>
 </head>
-<body>
-    <!-- Cabeçalho -->
-    <header class="sticky top-0 z-50 bg-black bg-opacity-90 border-b border-gray-800">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center">
-                <a href="/" class="flex items-center">
-                    <img src="logo-seja-igreja.png" alt="Seja Igreja" class="h-12">
-                </a>
+<body class="bg-fundo text-white font-sans">
+    <header class="bg-black bg-opacity-90 fixed w-full z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold text-roxo">SEJA INTENCIONAL</div>
+            <ul class="hidden md:flex space-x-6 text-sm">
+                <li><a href="#sobre" class="hover:text-roxo">Sobre Nós</a></li>
+                <li><a href="#palavra" class="hover:text-roxo">Palavra Pastoral</a></li>
+                <li><a href="#versiculo" class="hover:text-roxo">Versículo do Dia</a></li>
+                <li><a href="#agenda" class="hover:text-roxo">Agenda</a></li>
+                <li><a href="#celulas" class="hover:text-roxo">Células</a></li>
+                <li><a href="#contribua" class="hover:text-roxo">Contribua</a></li>
+            </ul>
+            <div class="md:hidden">
+                <a href="https://www.instagram.com/sejaigrejaoficial" target="_blank" class="text-roxo hover:underline">Instagram</a>
             </div>
-            
-            <nav class="hidden md:flex space-x-8">
-                <a href="#inicio" class="text-white hover:text-roxo transition">Início</a>
-                <a href="#sobre" class="text-white hover:text-roxo transition">Sobre Nós</a>
-                <a href="#agenda" class="text-white hover:text-roxo transition">Agenda</a>
-                <a href="#celulas" class="text-white hover:text-roxo transition">Células</a>
-                <a href="#contribua" class="text-white hover:text-roxo transition">Contribua</a>
-            </nav>
-            
-            <div class="flex items-center space-x-4">
-                <a href="https://www.instagram.com/sejaigrejaoficial" target="_blank" class="text-white hover:text-roxo transition">
-                    <i class="fab fa-instagram text-xl"></i>
-                </a>
-                <a href="https://wa.me/SEUNUMERO" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full transition flex items-center">
-                    <i class="fab fa-whatsapp mr-2"></i> WhatsApp
-                </a>
-                
-                <button class="md:hidden text-white focus:outline-none">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
-        </div>
-        
-        <!-- Menu Mobile -->
-        <div class="md:hidden hidden bg-black bg-opacity-95 py-4 px-4 border-t border-gray-800">
-            <div class="flex flex-col space-y-4">
-                <a href="#inicio" class="text-white hover:text-roxo transition">Início</a>
-                <a href="#sobre" class="text-white hover:text-roxo transition">Sobre Nós</a>
-                <a href="#agenda" class="text-white hover:text-roxo transition">Agenda</a>
-                <a href="#celulas" class="text-white hover:text-roxo transition">Células</a>
-                <a href="#contribua" class="text-white hover:text-roxo transition">Contribua</a>
-            </div>
-        </div>
+        </nav>
     </header>
 
-    <!-- Banner Principal -->
-    <section id="inicio" class="relative">
-        <div class="banner-gradient py-20">
-            <div class="container mx-auto px-4 text-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6">Comunidade Evangélica <span class="text-white">Seja Igreja</span></h1>
-                <p class="text-xl mb-8 max-w-2xl mx-auto">Ser Igreja é viver como Corpo de Cristo, com amor, serviço, comunhão e propósito.</p>
-                
-                <div class="flex flex-col md:flex-row justify-center gap-4">
-                    <a href="#agenda" class="bg-white text-black hover:bg-gray-200 px-6 py-3 rounded-full font-medium transition">Nossa Agenda</a>
-                    <a href="#transmissao" class="border-2 border-white text-white hover:bg-white hover:text-black px-6 py-3 rounded-full font-medium transition">Assista ao Vivo</a>
-                </div>
-            </div>
-        </div>
+    <!-- BANNER CORRIGIDO - Caminho ajustado para sua estrutura -->
+    <section class="pt-24 pb-12 bg-cover bg-center min-h-[400px] flex items-center" style="background-image: url('public/imagens/banner-seja-igreja.png.jpg'); background-color: #0e0e0e;">
         
-        <!-- Eventos em Destaque -->
-        <div class="container mx-auto px-4 -mt-10 relative z-10">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="card-bg rounded-xl p-6 shadow-lg">
-                    <div class="text-roxo font-bold mb-2">DOMINGO</div>
-                    <h3 class="text-xl font-bold mb-2">Culto de Louvor e Adoração</h3>
-                    <p class="text-gray-300 mb-4">18h às 20h</p>
-                    <a href="#" class="text-azul hover:underline">Mais informações</a>
-                </div>
-                
-                <div class="card-bg rounded-xl p-6 shadow-lg">
-                    <div class="text-roxo font-bold mb-2">QUARTA-FEIRA</div>
-                    <h3 class="text-xl font-bold mb-2">Célula</h3>
-                    <p class="text-gray-300 mb-4">20h</p>
-                    <a href="#celulas" class="text-azul hover:underline">Saiba mais</a>
-                </div>
-                
-                <div class="card-bg rounded-xl p-6 shadow-lg">
-                    <div class="text-roxo font-bold mb-2">1º SÁBADO</div>
-                    <h3 class="text-xl font-bold mb-2">Parece que foi Ontem</h3>
-                    <p class="text-gray-300 mb-4">Louvor e Oração</p>
-                    <a href="#" class="text-azul hover:underline">Detalhes</a>
-                </div>
-            </div>
         </div>
     </section>
 
-    <!-- Seção Sobre Nós -->
-    <section id="sobre" class="py-16">
+    <section class="py-16" id="eventos">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Eventos em Destaque</h2>
+            <div class="w-24 h-1 bg-roxo mx-auto mb-8"></div>
+            <p>Fique atento à nossa programação especial!</p>
+        </div>
+    </section>
+
+    <section class="py-16" id="sobre">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center">Sobre Nós</h2>
+            <div class="w-24 h-1 bg-roxo mx-auto mb-8"></div>
+            <p class="mb-4">Somos uma comunidade cristã apaixonada por Jesus e comprometida em viver o Evangelho com verdade, amor e simplicidade. Nosso propósito é levar o Reino de Deus às pessoas, famílias e cidades, sendo igreja onde estivermos.</p>
+            <p class="mb-4">Acreditamos que a igreja não é um prédio, mas um povo. E esse povo caminha junto, serve com alegria, ama com intensidade e anuncia com ousadia as boas novas do Reino.</p>
+            <p>Você é bem-vindo à nossa família. Aqui, há lugar para você.</p>
+        </div>
+    </section>
+
+    <section class="py-16 bg-black bg-opacity-80" id="palavra">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center">Palavra Pastoral</h2>
+            <div class="w-24 h-1 bg-roxo mx-auto mb-8"></div>
+            <blockquote class="italic text-center">"A igreja é a expressão visível do Reino invisível. Viva de forma que Cristo seja visto em você."</blockquote>
+        </div>
+    </section>
+
+    <section class="py-16" id="versiculo">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Versículo do Dia</h2>
+            <div class="w-24 h-1 bg-roxo mx-auto mb-8"></div>
+            <p id="versiculo-dia" class="text-lg italic">Carregando versículo...</p>
+        </div>
+    </section>
+
+    <section class="py-16" id="agenda">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Nossa Agenda</h2>
+            <div class="w-24 h-1 bg-roxo mx-auto mb-8"></div>
+            <ul class="space-y-2">
+                <li>Domingo 17h – EBD Adolescentes</li>
+                <li>Domingo 18h às 20h – Culto de Louvor e Adoração</li>
+                <li>Quarta-feira – Célula 20h</li>
+                <li>Quinta-feira – Na Mesa – Estudo Bíblico</li>
+                <li>1º Sábado do mês – Parece que foi Ontem – Louvor e Oração</li>
+                <li>3º Sábado Bimestral – Seja Homem</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="py-16 bg-black bg-opacity-80" id="celulas">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center">Células</h2>
+            <div class="w-24 h-1 bg-roxo mx-auto mb-8"></div>
+            <p class="text-lg mb-6">As células são pequenos grupos que se reúnem semanalmente nos lares para compartilhar a Palavra, orar uns pelos outros e viver a comunhão cristã de forma mais próxima. São espaços de cuidado, discipulado e amizade.</p>
+            <p class="mb-6">Acreditamos que cada casa pode ser uma extensão da Igreja, onde vidas são transformadas, dons são despertados e relacionamentos são fortalecidos.</p>
+            <p class="text-xl font-medium">Encontre uma célula perto de você e <span class="text-roxo">Seja Igreja onde você está.</span></p>
+        </div>
+    </section>
+
+    <section id="contribua" class="py-16">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Sobre Nós</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Contribua</h2>
                 <div class="w-24 h-1 bg-roxo mx-auto"></div>
             </div>
-            
-            <div class="max-w-4xl mx-auto">
-                <div class="card-bg rounded-xl p-8">
-                    <p class="text-lg mb-6">Somos a Comunidade Evangélica - Seja Igreja. Uma comunidade cristã evangélica que acredita que ser Igreja é mais do que estar em um templo.</p>
-                    
-                    <p class="mb-6">Ser Igreja é viver como Corpo de Cristo, com amor, serviço, comunhão e propósito. Nossa missão é proclamar o evangelho de Jesus Cristo, discipular pessoas, fortalecer famílias e servir à nossa cidade com compaixão.</p>
-                    
-                    <p class="mb-6">Cremos em uma fé prática, bíblica, relevante e transformadora. Aqui, cada pessoa é acolhida, desafiada a crescer espiritualmente e encorajada a viver o evangelho no dia a dia.</p>
-                    
-                    <p class="text-xl font-medium">Seja bem-vindo à nossa comunidade.<br><span class="text-roxo">Seja Igreja.</span></p>
-                </div>
+            <div class="max-w-2xl mx-auto card-bg rounded-xl p-8">
+                <p class="mb-6">Sua contribuição fortalece nossa missão e nos ajuda a continuar servindo com excelência.</p>
+                <ul class="mb-6 space-y-2">
+                    <li><strong>Pix:</strong> sejaigreja@comunidade.com.br</li>
+                    <li><strong>Banco:</strong> Cora SCFI 403</li>
+                    <li><strong>Agência:</strong> 0001</li>
+                    <li><strong>Conta:</strong> 4942756-2</li>
+                    <li><strong>CNPJ:</strong> 55.198.072/0001-87</li>
+                </ul>
+                <p class="text-sm text-gray-400">Deus abençoe sua generosidade!</p>
             </div>
         </div>
     </section>
 
-    <!-- Palavra Pastoral e Versículo do Dia -->
-    <section class="py-16 bg-black bg-opacity-50">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <!-- Palavra Pastoral -->
-                <div>
-                    <div class="text-center mb-8">
-                        <h2 class="text-3xl font-bold mb-4">Palavra Pastoral</h2>
-                        <div class="w-24 h-1 bg-azul mx-auto"></div>
-                    </div>
-                    
-                    <div class="card-bg rounded-xl p-8">
-                        <p class="text-lg mb-6">Seja bem-vindo! Na Comunidade Evangélica - Seja Igreja, nossa alegria é receber você.</p>
-                        
-                        <p class="mb-6">Oramos para que cada culto, célula, encontro ou simples conversa seja uma oportunidade de experimentar o amor e a presença de Deus. Que sua fé seja fortalecida, sua esperança renovada e seu coração aquecido pela Palavra.</p>
-                        
-                        <p class="mb-6">Estamos aqui para caminhar juntos.</p>
-                        
-                        <p class="text-xl font-medium">Seja Igreja.<br><span class="text-azul">Pr. Samuel Moura</span></p>
-                    </div>
-                </div>
-                
-                <!-- Versículo do Dia -->
-                <div>
-                    <div class="text-center mb-8">
-                        <h2 class="text-3xl font-bold mb-4">Versículo do Dia</h2>
-                        <div class="w-24 h-1 bg-roxo mx-auto"></div>
-                    </div>
-                    
-                    <div class="card-bg rounded-xl p-8 h-full">
-                        <div id="versiculo-do-dia" class="flex flex-col h-full">
-                            <div class="flex-grow">
-                                <p class="text-2xl mb-6">"Porque Deus tanto amou o mundo que deu o seu Filho Unigênito, para que todo o que nele crer não pereça, mas tenha a vida eterna."</p>
-                                <p class="text-gray-400">João 3:16</p>
-                            </div>
-                            
-                            <div class="mt-8">
-                                <button class="bg-roxo hover:bg-purple-600 text-white px-6 py-2 rounded-full transition">
-                                    Compartilhar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Agenda Semanal -->
-    <section id="agenda" class="py-16">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Nossa Agenda</h2>
-                <div class="w-24 h-1 bg-roxo mx-auto"></div>
-            </div>
-            
-            <div class="max-w-4xl mx-auto">
-                <div class="card-bg rounded-xl p-8">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div>
-                            <h3 class="text-2xl font-bold mb-6 text-roxo">Domingo</h3>
-                            <ul class="space-y-4">
-                                <li class="flex items-start">
-                                    <div class="bg-roxo text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1 flex-shrink-0">17h</div>
-                                    <div>
-                                        <h4 class="font-bold">EBD Adolescentes</h4>
-                                        <p class="text-gray-400 text-sm">Escola Bíblica Dominical</p>
-                                    </div>
-                                </li>
-                                <li class="flex items-start">
-                                    <div class="bg-roxo text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1 flex-shrink-0">18h</div>
-                                    <div>
-                                        <h4 class="font-bold">Culto de Louvor e Adoração</h4>
-                                        <p class="text-gray-400 text-sm">Até às 20h</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <div>
-                            <h3 class="text-2xl font-bold mb-6 text-azul">Quarta-feira</h3>
-                            <ul class="space-y-4">
-                                <li class="flex items-start">
-                                    <div class="bg-azul text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1 flex-shrink-0">20h</div>
-                                    <div>
-                                        <h4 class="font-bold">Célula</h4>
-                                        <p class="text-gray-400 text-sm">Reunião nos lares</p>
-                                    </div>
-                                </li>
-                            </ul>
-                            
-                            <h3 class="text-2xl font-bold mt-8 mb-6 text-azul">Quinta-feira</h3>
-                            <ul class="space-y-4">
-                                <li class="flex items-start">
-                                    <div class="bg-azul text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1 flex-shrink-0">20h</div>
-                                    <div>
-                                        <h4 class="font-bold">Na Mesa</h4>
-                                        <p class="text-gray-400 text-sm">Estudo Bíblico</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-12">
-                        <h3 class="text-2xl font-bold mb-6 text-roxo">Eventos Mensais</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div class="flex items-start">
-                                <div class="bg-roxo text-white rounded-full w-12 h-12 flex items-center justify-center mr-4 mt-1 flex-shrink-0">1º</div>
-                                <div>
-                                    <h4 class="font-bold">Parece que foi Ontem</h4>
-                                    <p class="text-gray-400">Louvor e Oração</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start">
-                                <div class="bg-azul text-white rounded-full w-12 h-12 flex items-center justify-center mr-4 mt-1 flex-shrink-0">3º</div>
-                                <div>
-                                    <h4 class="font-bold">Seja Homem</h4>
-                                    <p class="text-gray-400">Encontro bimestral</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Células -->
-    <section id="celulas" class="py-16 bg-black bg-opacity-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Células</h2>
-                <div class="w-24 h-1 bg-azul mx-auto"></div>
-            </div>
-            
-            <div class="max-w-4xl mx-auto">
-                <div class="card-bg rounded-xl p-8">
-                    <p class="text-lg mb-6">As células são pequenos grupos que se reúnem semanalmente em lares para compartilhar a Palavra, orar juntos e viver a comunhão cristã.</p>
-                    
-                    <p class="mb-8">É nelas que a vida da igreja acontece de forma próxima, acolhedora e transformadora. Faça parte de uma célula e descubra como é bom viver em família!</p>
-                    
-                    <div class="bg-roxo bg-opacity-20 border-l-4 border-roxo p-4 mb-8">
-                        <h4 class="font-bold text-lg mb-2">Quer participar de uma célula?</h4>
-                        <p>Entre em contato conosco pelo WhatsApp ou venha nos visitar no culto de domingo!</p>
-                    </div>
-                    
-                    <a href="https://wa.me/SEUNUMERO" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full transition inline-flex items-center">
-                        <i class="fab fa-whatsapp mr-2"></i> Falar sobre células
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Transmissão ao Vivo -->
-    <section id="transmissao" class="py-16">
+    <!-- Seção de Transmissão ao Vivo do YouTube -->
+    <section id="transmissao" class="py-16 bg-black bg-opacity-80">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Transmissão ao Vivo</h2>
@@ -318,18 +142,28 @@
             </div>
             
             <div class="max-w-4xl mx-auto">
-                <div class="card-bg rounded-xl overflow-hidden">
+                <div class="bg-black bg-opacity-50 rounded-xl overflow-hidden">
                     <div class="aspect-w-16 aspect-h-9">
-                        <iframe id="youtube-live" class="w-full h-96" src="https://www.youtube.com/embed/live_stream?channel=@sejaigrejaoficial" frameborder="0" allowfullscreen></iframe>
+                        <iframe 
+                            id="youtube-live" 
+                            class="w-full h-64 md:h-96" 
+                            src="https://www.youtube.com/embed/live_stream?channel=UCG5WkMuZjnO-9MjWmMBKZfg" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
                     </div>
                     
-                    <div class="p-6">
+                    <div class="p-6 text-center">
                         <h3 class="text-xl font-bold mb-2">Culto ao Vivo</h3>
                         <p class="text-gray-400 mb-4">Acompanhe nossas transmissões ao vivo diretamente pelo YouTube.</p>
                         
-                        <div class="flex flex-wrap gap-4">
-                            <a href="https://www.youtube.com/@sejaigrejaoficial" target="_blank" class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full transition flex items-center">
-                                <i class="fab fa-youtube mr-2"></i> Inscreva-se
+                        <div class="flex flex-wrap gap-4 justify-center">
+                            <a href="https://www.youtube.com/channel/UCG5WkMuZjnO-9MjWmMBKZfg" target="_blank" class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full transition flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                </svg>
+                                Inscreva-se
                             </a>
                             <a href="#" class="border border-white text-white hover:bg-white hover:text-black px-6 py-2 rounded-full transition">
                                 Receber lembrete
@@ -341,36 +175,27 @@
         </div>
     </section>
 
-    <!-- Contribua -->
-    <section id="contribua" class="py-16 bg-black bg-opacity-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Contribua</h2>
-                <div class="w-24 h-1 bg-azul mx-auto"></div>
-            </div>
-            
-            <div class="max-w-4xl mx-auto">
-                <div class="card-bg rounded-xl p-8">
-                    <p class="text-lg mb-6">Ajude-nos a continuar anunciando o Evangelho e servindo nossa cidade. Seja um parceiro nessa missão!</p>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-                        <div>
-                            <h3 class="text-xl font-bold mb-4 text-roxo">PIX</h3>
-                            <div class="bg-black bg-opacity-30 p-4 rounded-lg mb-4">
-                                <p class="text-sm text-gray-400 mb-1">Chave PIX (CNPJ)</p>
-                                <p class="font-mono break-all">55.198.072/0001-87</p>
-                            </div>
-                            
-                            <button id="copy-pix" class="bg-roxo hover:bg-purple-600 text-white px-4 py-2 rounded-full text-sm transition">
-                                Copiar Chave PIX
-                            </button>
-                        </div>
-                        
-                        <div>
-                            <h3 class="text-xl font-bold mb-4 text-azul">Transferência Bancária</h3>
-                            <div class="space-y-2">
-                                <p><span class="text-gray-400">Banco:</span> Cora SCFI 403</p>
-                                <p><span class="text-gray-400">Agência:</span> 0001</p>
-                                <p><span class="text-gray-400">Conta:</span> 4942756-2</p>
-                                <p><span class="text-gray-400">CNPJ:</span> 55.198.072/0001-87</p>
+    <footer class="bg-black bg-opacity-90 py-6 text-center text-gray-500 text-sm">
+        <p>Todos os direitos reservados: Comunidade Evangélica - Seja Igreja | CNPJ: 55.198.072/0001-87</p>
+        <p class="mt-2 italic">Informamos que nossos cultos são fotografados e gravados. Ao participar, você autoriza o uso de sua imagem nas mídias da igreja.</p>
+    </footer>
 
+    <a href="https://www.instagram.com/sejaigrejaoficial" target="_blank" class="fixed bottom-6 left-6 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white p-3 rounded-full shadow-lg z-50 transition-all duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+        <span class="sr-only">Instagram</span>
+    </a>
+
+    <a href="https://wa.me/5599999999999" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg z-50 transition-all duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"></path>
+            <path d="M8 12h8"></path>
+            <path d="M12 8v8"></path>
+        </svg>
+        <span class="sr-only">WhatsApp</span>
+    </a>
+</body>
+</html>

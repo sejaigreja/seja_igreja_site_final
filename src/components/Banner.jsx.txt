@@ -1,0 +1,11 @@
+export default function Banner() {
+  return (
+    <div className="w-full">
+      <img
+        src="/imagens/banner-seja-igreja.png"
+        alt="Banner Seja Igreja"
+        className="w-full h-[600px] object-cover rounded-b-2xl shadow-lg"
+      />
+    </div>
+  );
+}

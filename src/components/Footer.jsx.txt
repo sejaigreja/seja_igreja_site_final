@@ -1,0 +1,28 @@
+import React from 'react';
+
+const Footer = () => (
+  <footer className="bg-black text-white p-6 text-center text-sm">
+    {/* Política de Privacidade */}
+    <p>
+      <strong>Política de Privacidade:</strong> Seus dados estão seguros conosco.
+      Usamos cookies apenas para funcionalidades básicas e análise anônima.
+    </p>
+
+    {/* Aviso de gravações e fotos */}
+    <p className="mt-2">
+      <strong>Aviso sobre uso de imagem e gravações:</strong> Informamos que nossos
+      cultos são gravados e fotografados. As imagens podem ser utilizadas em nossas redes
+      e materiais institucionais. Ao participar, você concorda com esse uso. Caso tenha
+      dúvidas, procure nossa equipe de recepção.
+    </p>
+
+    {/* Direitos reservados e CNPJ */}
+    <p className="mt-4 font-semibold">
+      Todos os direitos reservados: Comunidade Evangélica - Seja Igreja | CNPJ:
+      55.198.072/0001-87
+    </p>
+  </footer>
+);
+
+export default Footer;
+
