@@ -46,6 +46,11 @@
         .fallback-hidden {
             display: none;
         }
+        /* Estilos para ícones SVG */
+        .icon-lg {
+            width: 2.5rem; /* 40px */
+            height: 2.5rem; /* 40px */
+        }
     </style>
 </head>
 <body class="bg-fundo text-white font-sans">
@@ -59,88 +64,237 @@
                 <li><a href="#agenda" class="hover:text-roxo">Agenda</a></li>
                 <li><a href="#celulas" class="hover:text-roxo">Células</a></li>
                 <li><a href="#contribua" class="hover:text-roxo">Contribua</a></li>
+                <li><a href="#porcao-de-vida" class="hover:text-roxo">Porção de Vida</a></li>
             </ul>
             <div class="md:hidden">
-                <a href="https://www.instagram.com/sejaigrejaoficial" target="_blank" class="text-roxo hover:underline">Instagram</a>
+                <!-- Ícones de redes sociais mais proeminentes para mobile -->
+                <div class="flex space-x-4">
+                    <a href="https://www.instagram.com/sejaigrejaoficial" target="_blank" class="text-white hover:text-roxo">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.07 1.645.07 4.85s-.012 3.584-.07 4.85c-.148 3.252-1.691 4.771-4.919 4.919-.058.028-1.265.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.07-1.645-.07-4.85s.012-3.584.07-4.85c.148-3.252 1.691-4.771 4.919-4.919.058-.028 1.265-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.668.072 4.948c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.073 4.948.073s3.668-.014 4.948-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.689-.073-4.948-.073zM0 12c0 6.627 5.373 12 12 12s12-5.373 12-12-5.373-12-12-12-12 5.373-12 12zm12 5.838c-3.403 0-6.162-2.759-6.162-6.162s2.759-6.162 6.162-6.162 6.162 2.759 6.162 6.162-2.759 6.162-6.162 6.162zm0-10.162c-2.209 0-4 1.79-4 4s1.791 4 4 4 4-1.79 4-4-1.791-4-4-4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/5521999999999" target="_blank" class="text-white hover:text-whatsapp">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.6-3.807-1.6-5.87 0-6.185 5.021-11.218 11.218-11.218 3.09 0 6.003 1.229 8.197 3.424 2.195 2.195 3.424 5.097 3.424 8.197 0 6.185-5.021 11.218-11.219 11.218-1.98 0-3.958-.528-5.65-1.44l-6.316 1.645zm6.593-4.809l-.328-.192c-1.443-.835-2.42-2.487-2.42-4.295 0-3.188 2.592-5.78 5.78-5.78 1.573 0 3.064.62 4.188 1.744 1.124 1.124 1.744 2.615 1.744 4.188 0 3.188-2.592 5.78-5.78 5.78-.896 0-1.76-.207-2.528-.588l-.208-.104-2.049.533.533-2.049z"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </nav>
     </header>
 
-    <section class="pt-24 pb-12 bg-cover bg-center min-h-[400px] flex items-center" style="background-image: url('public/imagens/banner-seja-igreja.png.jpg'); background-color: #0e0e0e;"></section>
+    <section class="pt-24 pb-12 bg-cover bg-center min-h-[400px] flex items-center" style="background-image: url(\'public/imagens/banner-seja-igreja.png.jpg\"); background-color: #0e0e0e;">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-white drop-shadow-lg">Comunidade Evangélica</h1>
+            <p class="text-2xl md:text-3xl text-white mt-4 drop-shadow-md">Seja Igreja</p>
+        </div>
+    </section>
 
     <section class="py-16" id="eventos">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Eventos em Destaque</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-3 text-roxo" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                Eventos em Destaque
+            </h2>
             <div class="w-24 h-1 bg-roxo mx-auto mb-8"></div>
-            <p>Fique atento à nossa programação especial!</p>
+            
+            <!-- Carrossel de Banners -->
+            <div id="carousel-container" class="relative w-full max-w-4xl mx-auto rounded-lg overflow-hidden shadow-lg" style="min-height: 450px;">
+                <img id="carousel-banner-image" src="" alt="Banner de Eventos" class="w-full h-full object-cover absolute top-0 left-0 transition-opacity duration-500 ease-in-out opacity-0" onload="this.style.opacity=1;">
+                
+                <!-- Mensagem de Fallback -->
+                <div id="carousel-fallback-message" class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-70 text-white p-8 text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-roxo mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <h3 class="text-2xl font-bold mb-2">Em Breve: Nossos Destaques!</h3>
+                    <p class="text-lg">Estamos preparando novidades incríveis para você. Fique atento aos nossos próximos eventos e programações especiais!</p>
+                    <p class="text-sm text-gray-400 mt-4">Enquanto isso, confira nossa agenda completa abaixo.</p>
+                </div>
+            </div>
+
+            <p class="text-lg mt-8">Fique atento à nossa programação especial!</p>
         </div>
     </section>
 
     <section class="py-16" id="sobre">
         <div class="container mx-auto px-4 max-w-3xl">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center">Sobre Nós</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-3 text-roxo" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Sobre Nós
+            </h2>
             <div class="w-24 h-1 bg-roxo mx-auto mb-8"></div>
             <p class="mb-4">Somos uma comunidade cristã apaixonada por Jesus e comprometida em viver o Evangelho com verdade, amor e simplicidade. Nosso propósito é levar o Reino de Deus às pessoas, famílias e cidades, sendo igreja onde estivermos.</p>
             <p class="mb-4">Acreditamos que a igreja não é um prédio, mas um povo. E esse povo caminha junto, serve com alegria, ama com intensidade e anuncia com ousadia as boas novas do Reino.</p>
-            <p>Você é bem-vindo à nossa família. Aqui, há lugar para você.</p>
+            <p class="mb-4">Você é bem-vindo à nossa família. Aqui, há lugar para você.</p>
+            
+            <!-- Adição da história e testemunhos -->
+            <p class="mb-4">Nossa jornada começou em [Ano de Fundação], com a visão de [breve descrição da visão inicial]. Ao longo dos anos, testemunhamos [mencione um marco importante ou tipo de impacto].</p>
+            <h3 class="text-2xl md:text-3xl font-bold mb-4 text-center mt-12">Histórias que Inspiram</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-black bg-opacity-50 p-6 rounded-lg shadow-lg">
+                    <p class="italic mb-4">"A Comunidade Seja Igreja transformou minha vida. Encontrei um lugar de acolhimento e crescimento espiritual que eu tanto buscava."</p>
+                    <p class="text-right font-medium">- Nome do Membro 1</p>
+                </div>
+                <div class="bg-black bg-opacity-50 p-6 rounded-lg shadow-lg">
+                    <p class="italic mb-4">"Através das células, pude me conectar com pessoas incríveis e aprofundar minha fé. Sou grato por fazer parte desta família."</p>
+                    <p class="text-right font-medium">- Nome do Membro 2</p>
+                </div>
+            </div>
+            <!-- Fim da adição -->
+
+            <!-- Placeholder para imagem da seção Sobre Nós -->
+            <div class="mt-12 text-center">
+                <img src="public/imagens/sobre_nos_placeholder.jpg" alt="Nossa Comunidade" class="rounded-lg shadow-lg mx-auto max-w-full h-auto" />
+                <p class="text-sm text-gray-400 mt-2">Momentos de comunhão e fé em nossa comunidade.</p>
+            </div>
         </div>
     </section>
 
     <section class="py-16 bg-black bg-opacity-80" id="palavra">
         <div class="container mx-auto px-4 max-w-3xl">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center">Palavra Pastoral</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-3 text-roxo" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5s3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18s-3.332.477-4.5 1.253" />
+                </svg>
+                Palavra Pastoral
+            </h2>
             <div class="w-24 h-1 bg-roxo mx-auto mb-8"></div>
-            <blockquote class="italic text-center">"A igreja é a expressão visível do Reino invisível. Viva de forma que Cristo seja visto em você."</blockquote>
+            <blockquote class="italic text-center text-lg mb-8">"A igreja é a expressão visível do Reino invisível. Viva de forma que Cristo seja visto em você."</blockquote>
+            
+            <!-- Placeholder para seção de blog/artigos pastorais -->
+            <div class="text-center">
+                <p class="text-gray-400 mb-4">Leia mais mensagens e reflexões do nosso pastor:</p>
+                <a href="#blog" class="bg-roxo hover:bg-azul text-white px-6 py-3 rounded-full transition inline-flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13V7a2 2 0 00-2-2H5a2 2 0 00-2 2v13a2 2 0 002 2h14a2 2 0 002-2z" />
+                    </svg>
+                    Acesse nosso Blog
+                </a>
+            </div>
         </div>
     </section>
 
     <section class="py-16" id="versiculo">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Versículo do Dia</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-3 text-roxo" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5s3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18s-3.332.477-4.5 1.253" />
+                </svg>
+                Versículo do Dia
+            </h2>
             <div class="w-24 h-1 bg-roxo mx-auto mb-8"></div>
-            <p id="versiculo-dia" class="text-lg italic">Carregando versículo...</p>
+            <div id="versiculo-container" class="bg-black bg-opacity-50 p-6 rounded-lg shadow-lg max-w-xl mx-auto">
+                <p id="versiculo-dia" class="text-lg italic">Carregando versículo...</p>
+                <p id="versiculo-referencia" class="text-sm text-gray-400 mt-2"></p>
+            </div>
         </div>
     </section>
 
     <section class="py-16" id="agenda">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Nossa Agenda</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-3 text-roxo" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                Nossa Agenda
+            </h2>
             <div class="w-24 h-1 bg-roxo mx-auto mb-8"></div>
-            <ul class="space-y-2">
-                <li>Domingo 17h – EBD Adolescentes</li>
-                <li>Domingo 18h às 20h – Culto de Louvor e Adoração</li>
-                <li>Quarta-feira – Célula 20h</li>
-                <li>Quinta-feira – Na Mesa – Estudo Bíblico</li>
-                <li>1º Sábado do mês – Parece que foi Ontem – Louvor e Oração</li>
-                <li>3º Sábado Bimestral – Seja Homem</li>
+            <ul class="space-y-4 text-lg max-w-2xl mx-auto">
+                <li class="bg-black bg-opacity-50 p-4 rounded-lg shadow-md flex items-center justify-between">
+                    <span>Domingo 17h – EBD Adolescentes</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-azul" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </li>
+                <li class="bg-black bg-opacity-50 p-4 rounded-lg shadow-md flex items-center justify-between">
+                    <span>Domingo 18h às 20h – Culto de Louvor e Adoração</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-azul" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </li>
+                <li class="bg-black bg-opacity-50 p-4 rounded-lg shadow-md flex items-center justify-between">
+                    <span>Quarta-feira – Célula 20h</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-azul" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </li>
+                <li class="bg-black bg-opacity-50 p-4 rounded-lg shadow-md flex items-center justify-between">
+                    <span>Quinta-feira – Na Mesa – Estudo Bíblico</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-azul" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </li>
+                <li class="bg-black bg-opacity-50 p-4 rounded-lg shadow-md flex items-center justify-between">
+                    <span>1º Sábado do mês – Parece que foi Ontem – Louvor e Oração</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-azul" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </li>
+                <li class="bg-black bg-opacity-50 p-4 rounded-lg shadow-md flex items-center justify-between">
+                    <span>3º Sábado Bimestral – Seja Homem</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-azul" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </li>
             </ul>
+            <!-- Placeholder para imagem da seção Agenda -->
+            <div class="mt-12 text-center">
+                <img src="public/imagens/agenda_placeholder.jpg" alt="Nossa Comunidade" class="rounded-lg shadow-lg mx-auto max-w-full h-auto" />
+                <p class="text-sm text-gray-400 mt-2">Fique por dentro de todos os nossos eventos e reuniões.</p>
+            </div>
         </div>
     </section>
 
     <section class="py-16 bg-black bg-opacity-80" id="celulas">
         <div class="container mx-auto px-4 max-w-3xl">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center">Células</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-3 text-roxo" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h2a2 2 0 002-2V8a2 2 0 00-2-2h-2M4 18.5V20a2 2 0 002 2h3.5M7 12h10M4 5.5V4a2 2 0 012-2h3.5" />
+                </svg>
+                Células
+            </h2>
             <div class="w-24 h-1 bg-roxo mx-auto mb-8"></div>
             <p class="text-lg mb-6">As células são pequenos grupos que se reúnem semanalmente nos lares para compartilhar a Palavra, orar uns pelos outros e viver a comunhão cristã de forma mais próxima. São espaços de cuidado, discipulado e amizade.</p>
             <p class="mb-6">Acreditamos que cada casa pode ser uma extensão da Igreja, onde vidas são transformadas, dons são despertados e relacionamentos são fortalecidos.</p>
-            <p class="text-xl font-medium">Encontre uma célula perto de você e <span class="text-roxo">Seja Igreja onde você está.</span></p>
+            <p class="text-xl font-medium mb-8">Encontre uma célula perto de você e <span class="text-roxo">Seja Igreja onde você está.</span></p>
+            
+            <!-- Botão WhatsApp específico para Células -->
+            <div class="text-center">
+                <a href="https://wa.me/5521999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20as%20células." target="_blank" class="bg-whatsapp hover:bg-green-600 text-white px-8 py-4 rounded-full text-xl font-bold transition inline-flex items-center shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.6-3.807-1.6-5.87 0-6.185 5.021-11.218 11.218-11.218 3.09 0 6.003 1.229 8.197 3.424 2.195 2.195 3.424 5.097 3.424 8.197 0 6.185-5.021 11.218-11.219 11.218-1.98 0-3.958-.528-5.65-1.44l-6.316 1.645zm6.593-4.809l-.328-.192c-1.443-.835-2.42-2.487-2.42-4.295 0-3.188 2.592-5.78 5.78-5.78 1.573 0 3.064.62 4.188 1.744 1.124 1.124 1.744 2.615 1.744 4.188 0 3.188-2.592 5.78-5.78 5.78-.896 0-1.76-.207-2.528-.588l-.208-.104-2.049.533.533-2.049z"/>
+                    </svg>
+                    Fale Conosco sobre Células
+                </a>
+            </div>
         </div>
     </section>
 
     <section id="contribua" class="py-16">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Contribua</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-3 text-roxo" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                    Contribua
+                </h2>
                 <div class="w-24 h-1 bg-roxo mx-auto"></div>
             </div>
-            <div class="max-w-2xl mx-auto card-bg rounded-xl p-8">
-                <p class="mb-6">Sua contribuição fortalece nossa missão e nos ajuda a continuar servindo com excelência.</p>
-                <ul class="mb-6 space-y-2">
-                    <li><strong>Pix:</strong> sejaigreja@comunidade.com.br</li>
-                    <li><strong>Banco:</strong> Cora SCFI 403</li>
-                    <li><strong>Agência:</strong> 0001</li>
-                    <li><strong>Conta:</strong> 4942756-2</li>
-                    <li><strong>CNPJ:</strong> 55.198.072/0001-87</li>
+            <div class="max-w-2xl mx-auto bg-black bg-opacity-50 rounded-xl p-8 shadow-lg">
+                <p class="mb-6 text-lg">Sua contribuição fortalece nossa missão e nos ajuda a continuar servindo com excelência.</p>
+                <ul class="mb-6 space-y-3 text-base">
+                    <li class="flex items-center"><strong class="w-20">Pix:</strong> <span class="ml-2">sejaigreja@comunidade.com.br</span></li>
+                    <li class="flex items-center"><strong class="w-20">Banco:</strong> <span class="ml-2">Cora SCFI 403</span></li>
+                    <li class="flex items-center"><strong class="w-20">Agência:</strong> <span class="ml-2">0001</span></li>
+                    <li class="flex items-center"><strong class="w-20">Conta:</strong> <span class="ml-2">4942756-2</span></li>
+                    <li class="flex items-center"><strong class="w-20">CNPJ:</b> <span class="ml-2">55.198.072/0001-87</span></li>
                 </ul>
                 <p class="text-sm text-gray-400">Deus abençoe sua generosidade!</p>
             </div>
@@ -150,12 +304,17 @@
     <section id="transmissao" class="py-16 bg-black bg-opacity-80">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Transmissão ao Vivo</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-3 text-roxo" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                    </svg>
+                    Transmissão ao Vivo
+                </h2>
                 <div class="w-24 h-1 bg-roxo mx-auto"></div>
             </div>
             
             <div class="max-w-4xl mx-auto">
-                <div class="bg-black bg-opacity-50 rounded-xl overflow-hidden">
+                <div class="bg-black bg-opacity-50 rounded-xl overflow-hidden shadow-lg">
                     <div class="player-container">
                         <!-- Player de transmissão ao vivo -->
                         <iframe 
@@ -167,7 +326,7 @@
                         </iframe>
                         
                         <!-- Fallback quando não há transmissão -->
-                        <div id="fallback-message" class="absolute inset-0 flex flex-col items-center justify-center bg-black p-4 text-center">
+                        <div id="fallback-message" class="absolute inset-0 flex flex-col items-center justify-center bg-black p-4 text-center hidden">
                             <div class="mb-4">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-roxo" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
@@ -211,11 +370,73 @@
         </div>
     </section>
 
+    <!-- Nova Seção: Porção de Vida -->
+    <section id="porcao-de-vida" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-3 text-roxo" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                    </svg>
+                    Porção de Vida
+                </h2>
+                <div class="w-24 h-1 bg-roxo mx-auto"></div>
+                <p class="text-lg mt-4">Pequenas doses de inspiração e reflexão para o seu dia a dia. Assista nossos vídeos curtos e seja edificado!</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Exemplo de Vídeo 1 -->
+                <a href="https://www.instagram.com/reel/DHd37QcMzhJ/?igsh=MWM3aXl2enljNHI5bQ%3D%3D" target="_blank" class="block bg-black bg-opacity-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="public/imagens/videos/porcao_de_vida/video_thumb_1.jpg" alt="O sacrifício que nos reconectou com o pai" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1">Título do Vídeo 1</h3>
+                        <p class="text-gray-400 text-sm">Uma breve descrição do conteúdo do vídeo.</p>
+                    </div>
+                </a>
+                
+                <!-- Exemplo de Vídeo 2 -->
+                <a href="https://www.youtube.com/watch?v=VIDEO_ID_2" target="_blank" class="block bg-black bg-opacity-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="public/imagens/videos/video_thumb_2.jpg" alt="Título do Vídeo 2" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1">Título do Vídeo 2</h3>
+                        <p class="text-gray-400 text-sm">Uma breve descrição do conteúdo do vídeo.</p>
+                    </div>
+                </a>
+
+                <!-- Exemplo de Vídeo 3 -->
+                <a href="https://www.youtube.com/watch?v=VIDEO_ID_3" target="_blank" class="block bg-black bg-opacity-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="public/imagens/videos/video_thumb_3.jpg" alt="Título do Vídeo 3" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1">Título do Vídeo 3</h3>
+                        <p class="text-gray-400 text-sm">Uma breve descrição do conteúdo do vídeo.</p>
+                    </div>
+                </a>
+
+                <!-- Exemplo de Vídeo 4 -->
+                <a href="https://www.youtube.com/watch?v=VIDEO_ID_4" target="_blank" class="block bg-black bg-opacity-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="public/imagens/videos/video_thumb_4.jpg" alt="Título do Vídeo 4" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1">Título do Vídeo 4</h3>
+                        <p class="text-gray-400 text-sm">Uma breve descrição do conteúdo do vídeo.</p>
+                    </div>
+                </a>
+
+                <!-- Adicione mais vídeos aqui seguindo o mesmo padrão -->
+            </div>
+        </div>
+    </section>
+
     <!-- SEÇÃO DE ENDEREÇO -->
     <section id="endereco" class="py-16 bg-black bg-opacity-60">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Nosso Endereço</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-3 text-roxo" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                    Nosso Endereço
+                </h2>
                 <div class="w-24 h-1 bg-roxo mx-auto mb-8"></div>
             </div>
             
@@ -260,54 +481,124 @@
                         allowfullscreen 
                         loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"
-                        aria-label="Mapa da localização da Comunidade Evangélica - SEJA IGREJA"
-                        class="w-full h-full min-h-[300px]"
-                    ></iframe>
+                        aria-label="Mapa da Comunidade Evangélica - Seja Igreja">
+                    </iframe>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-black bg-opacity-90 py-6 text-center text-gray-500 text-sm">
-        <p>Todos os direitos reservados: Comunidade Evangélica - Seja Igreja | CNPJ: 55.198.072/0001-87</p>
-        <p class="mt-2 italic">Informamos que nossos cultos são fotografados e gravados. Ao participar, você autoriza o uso de sua imagem nas mídias da igreja.</p>
+    <footer class="bg-black bg-opacity-90 py-8 text-center text-gray-400 text-sm">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 Todos os direitos reservados: Comunidade Evangélica - Seja Igreja | CNPJ: 55.198.072/0001-87</p>
+            <p class="mt-2">Informamos que nossos cultos são fotografados e gravados. Ao participar, você autoriza o uso de sua imagem nas mídias da igreja.</p>
+            <!-- Links de redes sociais no rodapé (opcional, já temos no header) -->
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="https://www.instagram.com/sejaigrejaoficial" target="_blank" class="text-gray-400 hover:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.07 1.645.07 4.85s-.012 3.584-.07 4.85c-.148 3.252-1.691 4.771-4.919 4.919-.058.028-1.265.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.07-1.645-.07-4.85s.012-3.584.07-4.85c.148-3.252 1.691-4.771 4.919-4.919.058-.028 1.265-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.668.072 4.948c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.073 4.948.073s3.668-.014 4.948-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.689-.073-4.948-.073zM0 12c0 6.627 5.373 12 12 12s12-5.373 12-12-5.373-12-12-12-12 5.373-12 12zm12 5.838c-3.403 0-6.162-2.759-6.162-6.162s2.759-6.162 6.162-6.162 6.162 2.759 6.162 6.162-2.759 6.162-6.162 6.162zm0-10.162c-2.209 0-4 1.79-4 4s1.791 4 4 4 4-1.79 4-4-1.791-4-4-4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+                <a href="https://wa.me/5521999999999" target="_blank" class="text-gray-400 hover:text-whatsapp">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.6-3.807-1.6-5.87 0-6.185 5.021-11.218 11.218-11.218 3.09 0 6.003 1.229 8.197 3.424 2.195 2.195 3.424 5.097 3.424 8.197 0 6.185-5.021 11.218-11.219 11.218-1.98 0-3.958-.528-5.65-1.44l-6.316 1.645zm6.593-4.809l-.328-.192c-1.443-.835-2.42-2.487-2.42-4.295 0-3.188 2.592-5.78 5.78-5.78 1.573 0 3.064.62 4.188 1.744 1.124 1.124 1.744 2.615 1.744 4.188 0 3.188-2.592 5.78-5.78 5.78-.896 0-1.76-.207-2.528-.588l-.208-.104-2.049.533.533-2.049z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
     </footer>
 
-    <a href="https://www.instagram.com/sejaigrejaoficial" target="_blank" class="fixed bottom-6 left-6 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white p-3 rounded-full shadow-lg z-50 transition-all duration-300">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-        </svg>
-        <span class="sr-only">Instagram</span>
-    </a>
-
-    <a href="https://wa.me/5599999999999" target="_blank" class="fixed bottom-6 right-6 bg-whatsapp hover:bg-green-600 text-white p-3 rounded-full shadow-lg z-50 transition-all duration-300">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-        </svg>
-        <span class="sr-only">WhatsApp</span>
-    </a>
-
     <script>
-        // Verificação simples - esconde a mensagem alternativa após 8 segundos
-        document.addEventListener('DOMContentLoaded', function() {
-            setTimeout(function() {
-                document.getElementById('fallback-message').classList.add('fallback-hidden');
-            }, 8000);
-            
-            // Verifica periodicamente (a cada 5 minutos)
-            setInterval(function() {
-                // Recarrega o iframe para verificar se começou uma transmissão
-                const iframe = document.getElementById('youtube-live');
-                iframe.src = iframe.src;
-                
-                // Mostra a mensagem novamente por 8 segundos
-                document.getElementById('fallback-message').classList.remove('fallback-hidden');
-                setTimeout(function() {
-                    document.getElementById('fallback-message').classList.add('fallback-hidden');
-                }, 8000);
-            }, 300000); // 300000 ms = 5 minutos
+        // Script para o Versículo do Dia (manter o seu original, se houver)
+        document.addEventListener("DOMContentLoaded", () => {
+            const versiculoDiaElement = document.getElementById("versiculo-dia");
+            const versiculoReferenciaElement = document.getElementById("versiculo-referencia");
+
+            // Simulação de carregamento de versículo
+            setTimeout(() => {
+                versiculoDiaElement.textContent = "Porque onde estiverem dois ou três reunidos em meu nome, aí estou eu no meio deles.";
+                versiculoReferenciaElement.textContent = "Mateus 18:20";
+            }, 1500);
+        });
+
+        // Script para verificar transmissão ao vivo (manter o seu original, se houver)
+        // Este é um exemplo simplificado. Em um ambiente real, você precisaria de uma API
+        // para verificar o status da transmissão ao vivo do YouTube.
+        document.addEventListener("DOMContentLoaded", () => {
+            const youtubeLiveIframe = document.getElementById("youtube-live");
+            const fallbackMessage = document.getElementById("fallback-message");
+
+            // Apenas mostra o iframe e esconde a mensagem de fallback. 
+            // Para uma verificação real de transmissão ao vivo, seria necessário usar a API do YouTube.
+            fallbackMessage.classList.add("hidden");
+            youtubeLiveIframe.style.display = "block";
+        });
+
+        // Script para o Carrossel de Banners
+        document.addEventListener("DOMContentLoaded", () => {
+            const bannerImage = document.getElementById("carousel-banner-image");
+            const fallbackMessage = document.getElementById("carousel-fallback-message");
+            const imagePaths = [
+                "public/imagens/banner1.jpg",
+                "public/imagens/banner2.jpg",
+                "public/imagens/banner3.jpg",
+                "public/imagens/banner4.jpg"
+                // Adicione mais banners aqui se desejar, seguindo o padrão banner5.jpg, banner6.jpg, etc.
+            ];
+            let loadedBanners = [];
+            let currentBannerIndex = 0;
+            let carouselInterval;
+
+            // Função para pré-carregar uma imagem e verificar sua existência
+            const preloadImage = (url) => {
+                return new Promise((resolve, reject) => {
+                    const img = new Image();
+                    img.onload = () => resolve(url);
+                    img.onerror = () => reject(new Error(`Falha ao carregar imagem: ${url}`));
+                    img.src = url;
+                });
+            };
+
+            // Função para exibir o próximo banner
+            const showNextBanner = () => {
+                if (loadedBanners.length === 0) return; // Não faz nada se não houver banners
+
+                // Remove a opacidade para a transição
+                bannerImage.style.opacity = 0;
+
+                setTimeout(() => {
+                    currentBannerIndex = (currentBannerIndex + 1) % loadedBanners.length;
+                    bannerImage.src = loadedBanners[currentBannerIndex];
+                    // A opacidade será definida para 1 pelo onload no HTML
+                }, 500); // Tempo da transição em CSS
+            };
+
+            // Inicializa o carrossel
+            const initCarousel = async () => {
+                for (const path of imagePaths) {
+                    try {
+                        await preloadImage(path);
+                        loadedBanners.push(path);
+                    } catch (error) {
+                        console.warn(error.message); // Apenas um aviso se a imagem não existir
+                    }
+                }
+
+                if (loadedBanners.length === 0) {
+                    // Nenhum banner encontrado, exibe a mensagem de fallback
+                    bannerImage.style.display = "none";
+                    fallbackMessage.style.display = "flex"; // Garante que o fallback seja exibido
+                } else {
+                    // Banners encontrados, inicia o carrossel
+                    fallbackMessage.style.display = "none";
+                    bannerImage.style.display = "block";
+                    bannerImage.src = loadedBanners[currentBannerIndex];
+                    // Inicia a rotação automática a cada 5 segundos (5000 milissegundos)
+                    carouselInterval = setInterval(showNextBanner, 5000);
+                }
+            };
+
+            initCarousel();
         });
     </script>
 </body>
