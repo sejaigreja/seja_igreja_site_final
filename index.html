@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8" />
@@ -67,7 +66,6 @@
                 <li><a href="#porcao-de-vida" class="hover:text-roxo">Porção de Vida</a></li>
             </ul>
             <div class="md:hidden">
-                <!-- Ícones de redes sociais mais proeminentes para mobile -->
                 <div class="flex space-x-4">
                     <a href="https://www.instagram.com/sejaigrejaoficial" target="_blank" class="text-white hover:text-roxo">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -85,7 +83,6 @@
     </header>
 
     <section class="pt-24 pb-12 bg-cover bg-center min-h-[400px] flex items-center" style="background-image: url('/imagens/banner-seja-igreja.jpg'); background-color: #0e0e0e;">
-
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-4xl md:text-6xl font-bold text-white drop-shadow-lg">Comunidade Evangélica</h1>
             <p class="text-2xl md:text-3xl text-white mt-4 drop-shadow-md">Seja Igreja</p>
@@ -105,6 +102,18 @@
             <!-- Carrossel de Banners -->
             <div id="carousel-container" class="relative w-full max-w-4xl mx-auto rounded-lg overflow-hidden shadow-lg" style="min-height: 450px;">
                 <img id="carousel-banner-image" src="" alt="Banner de Eventos" class="w-full h-full object-cover absolute top-0 left-0 transition-opacity duration-500 ease-in-out opacity-0" onload="this.style.opacity=1;">
+                
+                <!-- Controles do Carrossel -->
+                <button id="carousel-prev" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 z-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button id="carousel-next" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 z-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
                 
                 <!-- Mensagem de Fallback -->
                 <div id="carousel-fallback-message" class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-70 text-white p-8 text-center">
@@ -134,8 +143,7 @@
             <p class="mb-4">Acreditamos que a igreja não é um prédio, mas um povo. E esse povo caminha junto, serve com alegria, ama com intensidade e anuncia com ousadia as boas novas do Reino.</p>
             <p class="mb-4">Você é bem-vindo à nossa família. Aqui, há lugar para você.</p>
             
-            <!-- Adição da história e testemunhos -->
-            <p class="mb-4">Nossa jornada começou em [Ano de Fundação], com a visão de [breve descrição da visão inicial]. Ao longo dos anos, testemunhamos [mencione um marco importante ou tipo de impacto].</p>
+            <p class="mb-4">Nossa jornada começou em 2023, com a visão de ser uma igreja bíblica e intecional. Ao longo dos últimos anos, testemunhamos a vontade e o agir de Deus, sobre nossas vidas.</p>
             <h3 class="text-2xl md:text-3xl font-bold mb-4 text-center mt-12">Histórias que Inspiram</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="bg-black bg-opacity-50 p-6 rounded-lg shadow-lg">
@@ -147,9 +155,7 @@
                     <p class="text-right font-medium">- Nome do Membro 2</p>
                 </div>
             </div>
-            <!-- Fim da adição -->
 
-            <!-- Placeholder para imagem da seção Sobre Nós -->
             <div class="mt-12 text-center">
                 <img src="public/imagens/sobre_nos_placeholder.jpg" alt="Nossa Comunidade" class="rounded-lg shadow-lg mx-auto max-w-full h-auto" />
                 <p class="text-sm text-gray-400 mt-2">Momentos de comunhão e fé em nossa comunidade.</p>
@@ -168,7 +174,6 @@
             <div class="w-24 h-1 bg-roxo mx-auto mb-8"></div>
             <blockquote class="italic text-center text-lg mb-8">"A igreja é a expressão visível do Reino invisível. Viva de forma que Cristo seja visto em você."</blockquote>
             
-            <!-- Placeholder para seção de blog/artigos pastorais -->
             <div class="text-center">
                 <p class="text-gray-400 mb-4">Leia mais mensagens e reflexões do nosso pastor:</p>
                 <a href="#blog" class="bg-roxo hover:bg-azul text-white px-6 py-3 rounded-full transition inline-flex items-center">
@@ -244,7 +249,6 @@
                     </svg>
                 </li>
             </ul>
-            <!-- Placeholder para imagem da seção Agenda -->
             <div class="mt-12 text-center">
                 <img src="public/imagens/agenda_placeholder.jpg" alt="Nossa Comunidade" class="rounded-lg shadow-lg mx-auto max-w-full h-auto" />
                 <p class="text-sm text-gray-400 mt-2">Fique por dentro de todos os nossos eventos e reuniões.</p>
@@ -263,9 +267,8 @@
             <div class="w-24 h-1 bg-roxo mx-auto mb-8"></div>
             <p class="text-lg mb-6">As células são pequenos grupos que se reúnem semanalmente nos lares para compartilhar a Palavra, orar uns pelos outros e viver a comunhão cristã de forma mais próxima. São espaços de cuidado, discipulado e amizade.</p>
             <p class="mb-6">Acreditamos que cada casa pode ser uma extensão da Igreja, onde vidas são transformadas, dons são despertados e relacionamentos são fortalecidos.</p>
-            <p class="text-xl font-medium mb-8">Encontre uma célula perto de você e <span class="text-roxo">Seja Igreja onde você está.</span></p>
+            <p class="text-xl font-medium mb-8">Encontre uma célula perto de você e <span class="text-roxo">Seja Igreja onde estiver.</span></p>
             
-            <!-- Botão WhatsApp específico para Células -->
             <div class="text-center">
                 <a href="https://wa.me/5521999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20as%20células." target="_blank" class="bg-whatsapp hover:bg-green-600 text-white px-8 py-4 rounded-full text-xl font-bold transition inline-flex items-center shadow-lg">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3" fill="currentColor" viewBox="0 0 24 24">
@@ -289,14 +292,14 @@
                 <div class="w-24 h-1 bg-roxo mx-auto"></div>
             </div>
             <div class="max-w-2xl mx-auto bg-black bg-opacity-50 rounded-xl p-8 shadow-lg">
-                <p class="mb-6 text-lg">Sua contribuição fortalece nossa missão e nos ajuda a continuar servindo com excelência.</p>
-                <ul class="mb-6 space-y-3 text-base">
-                    <li class="flex items-center"><strong class="w-20">Pix:</strong> <span class="ml-2">sejaigreja@comunidade.com.br</span></li>
-                    <li class="flex items-center"><strong class="w-20">Banco:</strong> <span class="ml-2">Cora SCFI 403</span></li>
-                    <li class="flex items-center"><strong class="w-20">Agência:</strong> <span class="ml-2">0001</span></li>
-                    <li class="flex items-center"><strong class="w-20">Conta:</strong> <span class="ml-2">4942756-2</span></li>
-                    <li class="flex items-center"><strong class="w-20">CNPJ:</b> <span class="ml-2">55.198.072/0001-87</span></li>
-                </ul>
+            <p class="mb-6 text-lg">Sua contribuição fortalece nossa missão e nos ajuda a continuar servindo com excelência.</p>
+            <ul class="mb-6 space-y-3 text-base">
+            <li class="flex items-center"><strong class="w-18">Pix:</strong> <span class="ml-2">CNPJ:55.198.072/0001-87</span></li>
+            <li class="flex items-center"><strong class="w-18">Banco:</strong> <span class="ml-2">Cora SCFI 403</span></li>
+            <li class="flex items-center"><strong class="w-18">Agência:</strong> <span class="ml-2">0001</span></li>
+            <li class="flex items-center"><strong class="w-18">Conta:</strong> <span class="ml-2">4942756-2</span></li>
+            <li class="flex items-center"><strong class="w-18">CNPJ:</b> <span class="ml-2">55.198.072/0001-87</span></li>
+            </ul>
                 <p class="text-sm text-gray-400">Deus abençoe sua generosidade!</p>
             </div>
         </div>
@@ -317,16 +320,16 @@
             <div class="max-w-4xl mx-auto">
                 <div class="bg-black bg-opacity-50 rounded-xl overflow-hidden shadow-lg">
                     <div class="player-container">
-                        <!-- Player de transmissão ao vivo -->
                         <iframe 
-                            id="youtube-live" 
-                            src="https://www.youtube.com/embed/live_stream?channel=UCG5WkMuZjnO-9MjWmMBKZfg&autoplay=1" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
+                             id="youtube-live"
+    src="https://www.youtube.com/embed/live_stream?channel=UCG5WkMuZjnO-9MjWmMBKZfg&autoplay=1"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+    class="w-full aspect-video"
+></iframe>
+        or
                         
-                        <!-- Fallback quando não há transmissão -->
                         <div id="fallback-message" class="absolute inset-0 flex flex-col items-center justify-center bg-black p-4 text-center hidden">
                             <div class="mb-4">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-roxo" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -371,7 +374,6 @@
         </div>
     </section>
 
-    <!-- Nova Seção: Porção de Vida -->
     <section id="porcao-de-vida" class="py-16">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
@@ -386,16 +388,14 @@
             </div>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                <!-- Exemplo de Vídeo 1 -->
                 <a href="https://www.instagram.com/reel/DHd37QcMzhJ/?igsh=MWM3aXl2enljNHI5bQ%3D%3D" target="_blank" class="block bg-black bg-opacity-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <img src="public/imagens/videos/porcao_de_vida/video_thumb_1.jpg" alt="O sacrifício que nos reconectou com o pai" class="w-full h-48 object-cover">
                     <div class="p-4">
-                        <h3 class="font-bold text-lg mb-1">Título do Vídeo 1</h3>
-                        <p class="text-gray-400 text-sm">Uma breve descrição do conteúdo do vídeo.</p>
+                        <h3 class="font-bold text-lg mb-1">Um novo e vivo caminho</h3>
+                        <p class="text-gray-400 text-sm">O Sacrifício de Cristo nos Reconectou com o Pai.</p>
                     </div>
                 </a>
                 
-                <!-- Exemplo de Vídeo 2 -->
                 <a href="https://www.youtube.com/watch?v=VIDEO_ID_2" target="_blank" class="block bg-black bg-opacity-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <img src="public/imagens/videos/video_thumb_2.jpg" alt="Título do Vídeo 2" class="w-full h-48 object-cover">
                     <div class="p-4">
@@ -404,7 +404,6 @@
                     </div>
                 </a>
 
-                <!-- Exemplo de Vídeo 3 -->
                 <a href="https://www.youtube.com/watch?v=VIDEO_ID_3" target="_blank" class="block bg-black bg-opacity-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <img src="public/imagens/videos/video_thumb_3.jpg" alt="Título do Vídeo 3" class="w-full h-48 object-cover">
                     <div class="p-4">
@@ -413,7 +412,6 @@
                     </div>
                 </a>
 
-                <!-- Exemplo de Vídeo 4 -->
                 <a href="https://www.youtube.com/watch?v=VIDEO_ID_4" target="_blank" class="block bg-black bg-opacity-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <img src="public/imagens/videos/video_thumb_4.jpg" alt="Título do Vídeo 4" class="w-full h-48 object-cover">
                     <div class="p-4">
@@ -421,13 +419,10 @@
                         <p class="text-gray-400 text-sm">Uma breve descrição do conteúdo do vídeo.</p>
                     </div>
                 </a>
-
-                <!-- Adicione mais vídeos aqui seguindo o mesmo padrão -->
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO DE ENDEREÇO -->
     <section id="endereco" class="py-16 bg-black bg-opacity-60">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
@@ -443,7 +438,7 @@
             
             <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-center">
                 <div class="space-y-4 text-center md:text-left">
-                    <h3 class="text-2xl font-bold text-roxo">Comunidade Evangélica-SEJA IGREJA</h3>
+                    <h3 class="text-2xl font-bold text-roxo">COMUNIDADE EVANGÉLICA-SEJA IGREJA</h3>
                     <p class="text-lg">Estrada dos Bandeirantes, 4.608</p>
                     <p class="text-lg">Curicica, Rio de Janeiro - RJ</p>
                     
@@ -493,7 +488,6 @@
         <div class="container mx-auto px-4">
             <p>&copy; 2025 Todos os direitos reservados: Comunidade Evangélica - Seja Igreja | CNPJ: 55.198.072/0001-87</p>
             <p class="mt-2">Informamos que nossos cultos são fotografados e gravados. Ao participar, você autoriza o uso de sua imagem nas mídias da igreja.</p>
-            <!-- Links de redes sociais no rodapé (opcional, já temos no header) -->
             <div class="flex justify-center space-x-4 mt-4">
                 <a href="https://www.instagram.com/sejaigrejaoficial" target="_blank" class="text-gray-400 hover:text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -510,7 +504,7 @@
     </footer>
 
     <script>
-        // Script para o Versículo do Dia (manter o seu original, se houver)
+        // Script para o Versículo do Dia
         document.addEventListener("DOMContentLoaded", () => {
             const versiculoDiaElement = document.getElementById("versiculo-dia");
             const versiculoReferenciaElement = document.getElementById("versiculo-referencia");
@@ -522,81 +516,102 @@
             }, 1500);
         });
 
-        // Script para verificar transmissão ao vivo (manter o seu original, se houver)
-        // Este é um exemplo simplificado. Em um ambiente real, você precisaria de uma API
-        // para verificar o status da transmissão ao vivo do YouTube.
+        // Script para verificar transmissão ao vivo
         document.addEventListener("DOMContentLoaded", () => {
             const youtubeLiveIframe = document.getElementById("youtube-live");
             const fallbackMessage = document.getElementById("fallback-message");
 
-            // Apenas mostra o iframe e esconde a mensagem de fallback. 
-            // Para uma verificação real de transmissão ao vivo, seria necessário usar a API do YouTube.
+            // Apenas mostra o iframe e esconde a mensagem de fallback
             fallbackMessage.classList.add("hidden");
             youtubeLiveIframe.style.display = "block";
         });
 
-        // Script para o Carrossel de Banners
+        // Script para o Carrossel de Banners - Versão com caminho na pasta raiz
         document.addEventListener("DOMContentLoaded", () => {
             const bannerImage = document.getElementById("carousel-banner-image");
             const fallbackMessage = document.getElementById("carousel-fallback-message");
+            const prevButton = document.getElementById("carousel-prev");
+            const nextButton = document.getElementById("carousel-next");
+            
+            // URLs das imagens no caminho especificado
             const imagePaths = [
-                "public/imagens/banner1.jpg",
-                "public/imagens/banner2.jpg",
-                "public/imagens/banner3.jpg",
-                "public/imagens/banner4.jpg"
-                // Adicione mais banners aqui se desejar, seguindo o padrão banner5.jpg, banner6.jpg, etc.
+                "public/imagens/carrossel/Banner1.jpg",
+                "public/imagens/carrossel/Banner2.jpg",
+                "public/imagens/carrossel/Banner3.jpg"
+                // Adicione mais banners conforme necessário
             ];
+            
             let loadedBanners = [];
             let currentBannerIndex = 0;
             let carouselInterval;
 
-            // Função para pré-carregar uma imagem e verificar sua existência
-            const preloadImage = (url) => {
-                return new Promise((resolve, reject) => {
-                    const img = new Image();
-                    img.onload = () => resolve(url);
-                    img.onerror = () => reject(new Error(`Falha ao carregar imagem: ${url}`));
-                    img.src = url;
-                });
+            // Função para mudar o banner
+            const changeBanner = (index) => {
+                bannerImage.style.opacity = 0;
+                setTimeout(() => {
+                    currentBannerIndex = index;
+                    bannerImage.src = loadedBanners[currentBannerIndex];
+                }, 500);
             };
 
             // Função para exibir o próximo banner
             const showNextBanner = () => {
-                if (loadedBanners.length === 0) return; // Não faz nada se não houver banners
+                const nextIndex = (currentBannerIndex + 1) % loadedBanners.length;
+                changeBanner(nextIndex);
+            };
 
-                // Remove a opacidade para a transição
-                bannerImage.style.opacity = 0;
+            // Função para exibir o banner anterior
+            const showPrevBanner = () => {
+                const prevIndex = (currentBannerIndex - 1 + loadedBanners.length) % loadedBanners.length;
+                changeBanner(prevIndex);
+            };
 
-                setTimeout(() => {
-                    currentBannerIndex = (currentBannerIndex + 1) % loadedBanners.length;
-                    bannerImage.src = loadedBanners[currentBannerIndex];
-                    // A opacidade será definida para 1 pelo onload no HTML
-                }, 500); // Tempo da transição em CSS
+            // Função para verificar se uma imagem existe
+            const checkImage = (url) => {
+                return new Promise((resolve) => {
+                    const img = new Image();
+                    img.onload = () => resolve(true);
+                    img.onerror = () => resolve(false);
+                    img.src = url;
+                });
             };
 
             // Inicializa o carrossel
             const initCarousel = async () => {
+                // Verifica quais imagens existem
                 for (const path of imagePaths) {
-                    try {
-                        await preloadImage(path);
+                    const exists = await checkImage(path);
+                    if (exists) {
                         loadedBanners.push(path);
-                    } catch (error) {
-                        console.warn(error.message); // Apenas um aviso se a imagem não existir
                     }
                 }
 
                 if (loadedBanners.length === 0) {
                     // Nenhum banner encontrado, exibe a mensagem de fallback
                     bannerImage.style.display = "none";
-                    fallbackMessage.style.display = "flex"; // Garante que o fallback seja exibido
-                } else {
-                    // Banners encontrados, inicia o carrossel
-                    fallbackMessage.style.display = "none";
-                    bannerImage.style.display = "block";
-                    bannerImage.src = loadedBanners[currentBannerIndex];
-                    // Inicia a rotação automática a cada 5 segundos (5000 milissegundos)
-                    carouselInterval = setInterval(showNextBanner, 5000);
+                    prevButton.style.display = "none";
+                    nextButton.style.display = "none";
+                    fallbackMessage.style.display = "flex";
+                    return;
                 }
+
+                // Configura os eventos dos botões
+                nextButton.addEventListener('click', showNextBanner);
+                prevButton.addEventListener('click', showPrevBanner);
+                
+                // Mostra o primeiro banner
+                bannerImage.src = loadedBanners[currentBannerIndex];
+                fallbackMessage.style.display = "none";
+                
+                // Inicia a rotação automática
+                carouselInterval = setInterval(showNextBanner, 5000);
+                
+                // Pausa o carrossel quando o mouse está sobre ele
+                const container = document.getElementById('carousel-container');
+                container.addEventListener('mouseenter', () => clearInterval(carouselInterval));
+                container.addEventListener('mouseleave', () => {
+                    carouselInterval = setInterval(showNextBanner, 5000);
+                });
             };
 
             initCarousel();
