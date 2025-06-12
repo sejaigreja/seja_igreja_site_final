@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8" />
@@ -18,7 +19,6 @@
         },
       };
     </script>
-    <script defer src="versiculo.js"></script>
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -157,7 +157,7 @@
             </div>
 
             <div class="mt-12 text-center">
-                <img src="public/imagens/sobre_nos_placeholder.jpg" alt="Nossa Comunidade" class="rounded-lg shadow-lg mx-auto max-w-full h-auto" />
+                <img src="imagens/sobre_nos_placeholder.jpg" alt="Nossa Comunidade" class="rounded-lg shadow-lg mx-auto max-w-full h-auto" />
                 <p class="text-sm text-gray-400 mt-2">Momentos de comunhão e fé em nossa comunidade.</p>
             </div>
         </div>
@@ -250,7 +250,7 @@
                 </li>
             </ul>
             <div class="mt-12 text-center">
-                <img src="public/imagens/agenda_placeholder.jpg" alt="Nossa Comunidade" class="rounded-lg shadow-lg mx-auto max-w-full h-auto" />
+                <img src="imagens/agenda_placeholder.jpg" alt="Nossa Comunidade" class="rounded-lg shadow-lg mx-auto max-w-full h-auto" />
                 <p class="text-sm text-gray-400 mt-2">Fique por dentro de todos os nossos eventos e reuniões.</p>
             </div>
         </div>
@@ -321,14 +321,13 @@
                 <div class="bg-black bg-opacity-50 rounded-xl overflow-hidden shadow-lg">
                     <div class="player-container">
                         <iframe 
-                             id="youtube-live"
-    src="https://www.youtube.com/embed/live_stream?channel=UCG5WkMuZjnO-9MjWmMBKZfg&autoplay=1"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-    class="w-full aspect-video"
-></iframe>
-        or
+                            id="youtube-live"
+                            src="https://www.youtube.com/embed/live_stream?channel=UCG5WkMuZjnO-9MjWmMBKZfg&autoplay=1"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            class="w-full aspect-video"
+                        ></iframe>
                         
                         <div id="fallback-message" class="absolute inset-0 flex flex-col items-center justify-center bg-black p-4 text-center hidden">
                             <div class="mb-4">
@@ -389,7 +388,7 @@
             
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 <a href="https://www.instagram.com/reel/DHd37QcMzhJ/?igsh=MWM3aXl2enljNHI5bQ%3D%3D" target="_blank" class="block bg-black bg-opacity-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <img src="public/imagens/videos/porcao_de_vida/video_thumb_1.jpg" alt="O sacrifício que nos reconectou com o pai" class="w-full h-48 object-cover">
+                    <img src="imagens/videos/porcao_de_vida/video_thumb_1.jpg" alt="O sacrifício que nos reconectou com o pai" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h3 class="font-bold text-lg mb-1">Um novo e vivo caminho</h3>
                         <p class="text-gray-400 text-sm">O Sacrifício de Cristo nos Reconectou com o Pai.</p>
@@ -397,7 +396,7 @@
                 </a>
                 
                 <a href="https://www.youtube.com/watch?v=VIDEO_ID_2" target="_blank" class="block bg-black bg-opacity-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <img src="public/imagens/videos/video_thumb_2.jpg" alt="Título do Vídeo 2" class="w-full h-48 object-cover">
+                    <img src="imagens/videos/video_thumb_2.jpg" alt="Título do Vídeo 2" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h3 class="font-bold text-lg mb-1">Porção de Vida</h3>
                         <p class="text-gray-400 text-sm">Uma breve descrição do conteúdo do vídeo.</p>
@@ -405,7 +404,7 @@
                 </a>
 
                 <a href="https://www.youtube.com/watch?v=VIDEO_ID_3" target="_blank" class="block bg-black bg-opacity-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <img src="public/imagens/videos/video_thumb_3.jpg" alt=Porção de Vida" class="w-full h-48 object-cover">
+                    <img src="imagens/videos/video_thumb_3.jpg" alt="Porção de Vida" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h3 class="font-bold text-lg mb-1">Título do Vídeo 3</h3>
                         <p class="text-gray-400 text-sm">Uma breve descrição do conteúdo do vídeo.</p>
@@ -413,7 +412,7 @@
                 </a>
 
                 <a href="https://www.youtube.com/watch?v=VIDEO_ID_4" target="_blank" class="block bg-black bg-opacity-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <img src="public/imagens/videos/video_thumb_4.jpg" alt="Título do Vídeo 4" class="w-full h-48 object-cover">
+                    <img src="imagens/videos/video_thumb_4.jpg" alt="Título do Vídeo 4" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h3 class="font-bold text-lg mb-1">Título do Vídeo 4</h3>
                         <p class="text-gray-400 text-sm">Uma breve descrição do conteúdo do vídeo.</p>
@@ -504,41 +503,46 @@
     </footer>
 
     <script>
-        // Script para o Versículo do Dia
+        // Script para o Versículo do Dia (versão simplificada sem React)
         document.addEventListener("DOMContentLoaded", () => {
             const versiculoDiaElement = document.getElementById("versiculo-dia");
             const versiculoReferenciaElement = document.getElementById("versiculo-referencia");
 
-            // Simulação de carregamento de versículo
-            setTimeout(() => {
-                versiculoDiaElement.textContent = "Porque onde estiverem dois ou três reunidos em meu nome, aí estou eu no meio deles.";
-                versiculoReferenciaElement.textContent = "Mateus 18:20";
-            }, 1500);
+            // Versículo fixo como fallback
+            const versiculoFallback = {
+                text: "Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna.",
+                reference: "João 3:16"
+            };
+
+            // Tenta buscar da API
+            fetch('https://bible-api.com/john%203:16?translation=almeida')
+                .then(res => {
+                    if (!res.ok) throw new Error('Erro ao buscar versículo');
+                    return res.json();
+                })
+                .then(data => {
+                    versiculoDiaElement.textContent = `"${data.text}"`;
+                    versiculoReferenciaElement.textContent = data.reference;
+                })
+                .catch(() => {
+                    // Fallback caso a API falhe
+                    versiculoDiaElement.textContent = `"${versiculoFallback.text}"`;
+                    versiculoReferenciaElement.textContent = versiculoFallback.reference;
+                });
         });
 
-        // Script para verificar transmissão ao vivo
-        document.addEventListener("DOMContentLoaded", () => {
-            const youtubeLiveIframe = document.getElementById("youtube-live");
-            const fallbackMessage = document.getElementById("fallback-message");
-
-            // Apenas mostra o iframe e esconde a mensagem de fallback
-            fallbackMessage.classList.add("hidden");
-            youtubeLiveIframe.style.display = "block";
-        });
-
-        // Script para o Carrossel de Banners - Versão com caminho na pasta raiz
+        // Script para o Carrossel de Banners - Versão corrigida
         document.addEventListener("DOMContentLoaded", () => {
             const bannerImage = document.getElementById("carousel-banner-image");
             const fallbackMessage = document.getElementById("carousel-fallback-message");
             const prevButton = document.getElementById("carousel-prev");
             const nextButton = document.getElementById("carousel-next");
             
-            // URLs das imagens no caminho especificado
+            // URLs das imagens (caminho relativo corrigido)
             const imagePaths = [
-                "public/imagens/carrossel/banner1.jpg",
-                "public/imagens/carrossel/banner2.jpg",
-                "public/imagens/carrossel/banner3.jpg"
-                // Adicione mais banners conforme necessário
+                "imagens/carrossel/banner1.jpg",
+                "imagens/carrossel/banner2.jpg",
+                "imagens/carrossel/banner3.jpg"
             ];
             
             let loadedBanners = [];
@@ -551,6 +555,9 @@
                 setTimeout(() => {
                     currentBannerIndex = index;
                     bannerImage.src = loadedBanners[currentBannerIndex];
+                    bannerImage.onload = () => {
+                        bannerImage.style.opacity = 1;
+                    };
                 }, 500);
             };
 
@@ -578,43 +585,63 @@
 
             // Inicializa o carrossel
             const initCarousel = async () => {
-                // Verifica quais imagens existem
-                for (const path of imagePaths) {
-                    const exists = await checkImage(path);
-                    if (exists) {
-                        loadedBanners.push(path);
+                try {
+                    // Verifica quais imagens existem
+                    for (const path of imagePaths) {
+                        const exists = await checkImage(path);
+                        console.log(`Verificando imagem ${path}: ${exists ? 'OK' : 'Não encontrada'}`);
+                        if (exists) {
+                            loadedBanners.push(path);
+                        }
                     }
-                }
 
-                if (loadedBanners.length === 0) {
-                    // Nenhum banner encontrado, exibe a mensagem de fallback
-                    bannerImage.style.display = "none";
-                    prevButton.style.display = "none";
-                    nextButton.style.display = "none";
-                    fallbackMessage.style.display = "flex";
-                    return;
-                }
+                    if (loadedBanners.length === 0) {
+                        // Nenhum banner encontrado, exibe a mensagem de fallback
+                        bannerImage.style.display = "none";
+                        prevButton.style.display = "none";
+                        nextButton.style.display = "none";
+                        fallbackMessage.style.display = "flex";
+                        return;
+                    }
 
-                // Configura os eventos dos botões
-                nextButton.addEventListener('click', showNextBanner);
-                prevButton.addEventListener('click', showPrevBanner);
-                
-                // Mostra o primeiro banner
-                bannerImage.src = loadedBanners[currentBannerIndex];
-                fallbackMessage.style.display = "none";
-                
-                // Inicia a rotação automática
-                carouselInterval = setInterval(showNextBanner, 5000);
-                
-                // Pausa o carrossel quando o mouse está sobre ele
-                const container = document.getElementById('carousel-container');
-                container.addEventListener('mouseenter', () => clearInterval(carouselInterval));
-                container.addEventListener('mouseleave', () => {
+                    // Configura os eventos dos botões
+                    nextButton.addEventListener('click', showNextBanner);
+                    prevButton.addEventListener('click', showPrevBanner);
+                    
+                    // Mostra o primeiro banner
+                    bannerImage.src = loadedBanners[currentBannerIndex];
+                    bannerImage.onload = () => {
+                        bannerImage.style.opacity = 1;
+                        fallbackMessage.style.display = "none";
+                    };
+                    
+                    // Inicia a rotação automática
                     carouselInterval = setInterval(showNextBanner, 5000);
-                });
+                    
+                    // Pausa o carrossel quando o mouse está sobre ele
+                    const container = document.getElementById('carousel-container');
+                    container.addEventListener('mouseenter', () => clearInterval(carouselInterval));
+                    container.addEventListener('mouseleave', () => {
+                        carouselInterval = setInterval(showNextBanner, 5000);
+                    });
+                } catch (error) {
+                    console.error('Erro no carrossel:', error);
+                    fallbackMessage.style.display = "flex";
+                }
             };
 
+            // Inicia o carrossel
             initCarousel();
+        });
+
+        // Script para verificar transmissão ao vivo
+        document.addEventListener("DOMContentLoaded", () => {
+            const youtubeLiveIframe = document.getElementById("youtube-live");
+            const fallbackMessage = document.getElementById("fallback-message");
+
+            // Apenas mostra o iframe e esconde a mensagem de fallback
+            fallbackMessage.classList.add("hidden");
+            youtubeLiveIframe.style.display = "block";
         });
     </script>
 </body>
