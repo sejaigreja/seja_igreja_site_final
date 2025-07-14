@@ -22,7 +22,7 @@
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag( ) {
+      function gtag(  ) {
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
@@ -50,6 +50,21 @@
             width: 2.5rem; /* 40px */
             height: 2.5rem; /* 40px */
         }
+
+        /* --- CÓDIGO RESPONSIVO PARA O CARROSSEL --- */
+        /* Define a altura do carrossel para telas pequenas (celulares) */
+        #carousel-container {
+            min-height: 250px;
+        }
+
+        /* Usa uma "media query" para aplicar uma altura maior apenas em telas
+           a partir de 768px de largura (tablets e desktops) */
+        @media (min-width: 768px) {
+            #carousel-container {
+                min-height: 450px;
+            }
+        }
+        /* --- FIM DO CÓDIGO NOVO --- */
     </style>
 </head>
 <body class="bg-fundo text-white font-sans">
@@ -82,7 +97,7 @@
         </nav>
     </header>
 
-    <section class="pt-24 pb-12 bg-cover bg-center min-h-[400px] flex items-center" style="background-image: url('imagens/banner-seja-igreja.jpg' ); background-color: #0e0e0e;">
+    <section class="pt-24 pb-12 bg-cover bg-center min-h-[400px] flex items-center" style="background-image: url('imagens/banner-seja-igreja.jpg'  ); background-color: #0e0e0e;">
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-4xl md:text-6xl font-bold text-white drop-shadow-lg"></h1>
             <p class="text-2xl md:text-3xl text-white mt-4 drop-shadow-md"></p>
@@ -99,11 +114,9 @@
             </h2>
             <div class="w-24 h-1 bg-roxo mx-auto mb-8"></div>
             
-            <!-- Carrossel de Banners -->
-            <div id="carousel-container" class="relative w-full max-w-4xl mx-auto rounded-lg overflow-hidden shadow-lg" style="min-height: 450px;">
+            <div id="carousel-container" class="relative w-full max-w-4xl mx-auto rounded-lg overflow-hidden shadow-lg">
                 <img id="carousel-banner-image" src="" alt="Banner de Eventos" class="w-full h-full object-cover absolute top-0 left-0 transition-opacity duration-500 ease-in-out opacity-0" onload="this.style.opacity=1;">
                 
-                <!-- Controles do Carrossel -->
                 <button id="carousel-prev" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 z-10">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
@@ -115,7 +128,6 @@
                     </svg>
                 </button>
                 
-                <!-- Mensagem de Fallback -->
                 <div id="carousel-fallback-message" class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-70 text-white p-8 text-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-roxo mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -130,7 +142,6 @@
         </div>
     </section>
 
-    <!-- O restante do seu HTML continua aqui... (Sobre, Palavra, Versículo, etc. ) -->
     <section class="py-16" id="sobre">
         <div class="container mx-auto px-4 max-w-3xl">
             <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center flex items-center justify-center">
@@ -266,13 +277,13 @@
                 Células
             </h2>
             <div class="w-24 h-1 bg-roxo mx-auto mb-8"></div>
-            <p class="text-lg mb-6">
             <p class="text-lg mb-6">As células são pequenos grupos que se reúnem semanalmente nos lares para compartilhar a Palavra, orar uns pelos outros e viver a comunhão cristã de forma mais próxima. São espaços de cuidado, discipulado e amizade.</p>
             <p class="mb-6">Acreditamos que cada casa pode ser uma extensão da Igreja, onde vidas são transformadas, dons são despertados e relacionamentos são fortalecidos.</p>
             <p class="text-xl font-medium mb-8">Encontre uma célula perto de você e <span class="text-roxo">Seja Igreja onde estiver.</span></p>
             
             <div class="text-center">
-                <a href="https://wa.me/5521000000000?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20as%20células." target="_blank" class="bg-whatsapp hover:bg-green-600 text-white px-8 py-4 rounded-full text-xl font-bold transition inline-flex items-center shadow-lg">
+                <a href="https://wa.me/5521000000000?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20as%20células." target="_blank" class="bg-whatsapp hover:bg-green-600 text-white px-8 py-4 rounded-full text-xl font
+bold transition inline-flex items-center shadow-lg">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M.057 24l1.687-6.163c-1.041-1.804-1.6-3.807-1.6-5.87 0-6.185 5.021-11.218 11.218-11.218 3.09 0 6.003 1.229 8.197 3.424 2.195 2.195 3.424 5.097 3.424 8.197 0 6.185-5.021 11.218-11.219 11.218-1.98 0-3.958-.528-5.65-1.44l-6.316 1.645zm6.593-4.809l-.328-.192c-1.443-.835-2.42-2.487-2.42-4.295 0-3.188 2.592-5.78 5.78-5.78 1.573 0 3.064.62 4.188 1.744 1.124 1.124 1.744 2.615 1.744 4.188 0 3.188-2.592 5.78-5.78 5.78-.896 0-1.76-.207-2.528-.588l-.208-.104-2.049.533.533-2.049z"/>
                     </svg>
@@ -497,14 +508,14 @@
                 </a>
                  <a href="https://wa.me/55210000000" target="_blank" class="text-gray-400 hover:text-whatsapp">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.6-3.807-1.6-5.87 0-6.185 5.021-11.218 11.218-11.218 3.09 0 6.003 1.229 8.197 3.424 2.195 2.195 3.424 5.097 3.424 8.197 0 6.185-5.021 11.218-11.219 11.218-1.98 0-3.958-.528-5.65-1.44l-6.316 1.645zm6.593-4.809l-.328-.192c-1.443-.835-2.42-2.487-2.42-4.295 0-3.188 2.592-5.78 5.78-5.78 1.573 0 3.064.62 4.188 1.744 1.124 1.124 1.744 2.615 1.744 4.188 0 3.188-2.592 5.78-5.78 5.78-.896 0-1.76-.207-2.528-.588l-.208-.104-2.049.533.533-2.049z"/>
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.6-3.807-1.6-5.87 0-6.185 5.021-11.218 11.218-11.218 3.09 0 6.003 1.229 8.197 3.424 2.195 2.195 3.424 5.097 3.424 8.197 0 6.185-5.021 1
+218-11.219 11.218-1.98 0-3.958-.528-5.65-1.44l-6.316 1.645zm6.593-4.809l-.328-.192c-1.443-.835-2.42-2.487-2.42-4.295 0-3.188 2.592-5.78 5.78-5.78 1.573 0 3.064.62 4.188 1.744 1.124 1.124 1.744 2.615 1.744 4.188 0 3.188-2.592 5.78-5.78 5.78-.896 0-1.76-.207-2.528-.588l-.208-.104-2.049.533.533-2.049z"/>
                     </svg>
                 </a>
             </div>
         </div>
     </footer>
 
-    <!-- O SCRIPT CORRIGIDO JÁ ESTÁ NO SEU CÓDIGO, MAS GARANTA QUE O FINAL ESTEJA ASSIM -->
     <script>
         // Script para o Versículo do Dia (versão simplificada sem React )
         document.addEventListener("DOMContentLoaded", () => {
@@ -516,7 +527,7 @@
                 reference: "João 3:16"
             };
 
-            fetch('https://bible-api.com/john%203:16?translation=almeida' )
+            fetch('https://bible-api.com/john%203:16?translation=almeida'  )
                 .then(res => {
                     if (!res.ok) throw new Error('Erro ao buscar versículo');
                     return res.json();
@@ -550,6 +561,7 @@
             let carouselInterval;
 
             const changeBanner = (index) => {
+                if (loadedBanners.length === 0) return;
                 bannerImage.style.opacity = 0;
                 setTimeout(() => {
                     currentBannerIndex = index;
@@ -561,11 +573,13 @@
             };
 
             const showNextBanner = () => {
+                if (loadedBanners.length === 0) return;
                 const nextIndex = (currentBannerIndex + 1) % loadedBanners.length;
                 changeBanner(nextIndex);
             };
 
             const showPrevBanner = () => {
+                if (loadedBanners.length === 0) return;
                 const prevIndex = (currentBannerIndex - 1 + loadedBanners.length) % loadedBanners.length;
                 changeBanner(prevIndex);
             };
@@ -633,3 +647,4 @@
     </script>
 </body>
 </html>
+
