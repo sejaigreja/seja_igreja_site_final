@@ -22,7 +22,7 @@
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() {
+      function gtag( ) {
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
@@ -82,7 +82,7 @@
         </nav>
     </header>
 
-    <section class="pt-24 pb-12 bg-cover bg-center min-h-[400px] flex items-center" style="background-image: url('/imagens/banner-seja-igreja.jpg'); background-color: #0e0e0e;">
+    <section class="pt-24 pb-12 bg-cover bg-center min-h-[400px] flex items-center" style="background-image: url('/imagens/banner-seja-igreja.jpg' ); background-color: #0e0e0e;">
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-4xl md:text-6xl font-bold text-white drop-shadow-lg"></h1>
             <p class="text-2xl md:text-3xl text-white mt-4 drop-shadow-md"></p>
@@ -130,6 +130,7 @@
         </div>
     </section>
 
+    <!-- O restante do seu HTML continua aqui... (Sobre, Palavra, Versículo, etc. ) -->
     <section class="py-16" id="sobre">
         <div class="container mx-auto px-4 max-w-3xl">
             <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center flex items-center justify-center">
@@ -265,6 +266,7 @@
                 Células
             </h2>
             <div class="w-24 h-1 bg-roxo mx-auto mb-8"></div>
+            <p class="text-lg mb-6">
             <p class="text-lg mb-6">As células são pequenos grupos que se reúnem semanalmente nos lares para compartilhar a Palavra, orar uns pelos outros e viver a comunhão cristã de forma mais próxima. São espaços de cuidado, discipulado e amizade.</p>
             <p class="mb-6">Acreditamos que cada casa pode ser uma extensão da Igreja, onde vidas são transformadas, dons são despertados e relacionamentos são fortalecidos.</p>
             <p class="text-xl font-medium mb-8">Encontre uma célula perto de você e <span class="text-roxo">Seja Igreja onde estiver.</span></p>
@@ -495,154 +497,4 @@
                 </a>
                 <a href="https://wa.me/55210000000" target="_blank" class="text-gray-400 hover:text-whatsapp">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.6-3.807-1.6-5.87 0-6.185 5.021-11.218 11.218-11.218 3.09 0 6.003 1.229 8.197 3.424 2.195 2.195 3.424 5.097 3.424 8.197 0 6.185-5.021 11.218-11.219 11.218-1.98 0-3.958-.528-5.65-1.44l-6.316 1.645zm6.593-4.809l-.328-.192c-1.443-.835-2.42-2.487-2.42-4.295 0-3.188 2.592-5.78 5.78-5.78 1.573 0 3.064.62 4.188 1.744 1.124 1.124 1.744 2.615 1.744 4.188 0 3.188-2.592 5.78-5.78 5.78-.896 0-1.76-.207-2.528-.588l-.208-.104-2.049.533.533-2.049z"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Script para o Versículo do Dia (versão simplificada sem React)
-        document.addEventListener("DOMContentLoaded", () => {
-            const versiculoDiaElement = document.getElementById("versiculo-dia");
-            const versiculoReferenciaElement = document.getElementById("versiculo-referencia");
-
-            // Versículo fixo como fallback
-            const versiculoFallback = {
-                text: "Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna.",
-                reference: "João 3:16"
-            };
-
-            // Tenta buscar da API
-            fetch('https://bible-api.com/john%203:16?translation=almeida')
-                .then(res => {
-                    if (!res.ok) throw new Error('Erro ao buscar versículo');
-                    return res.json();
-                })
-                .then(data => {
-                    versiculoDiaElement.textContent = `"${data.text}"`;
-                    versiculoReferenciaElement.textContent = data.reference;
-                })
-                .catch(() => {
-                    // Fallback caso a API falhe
-                    versiculoDiaElement.textContent = `"${versiculoFallback.text}"`;
-                    versiculoReferenciaElement.textContent = versiculoFallback.reference;
-                });
-        });
-
-        // Script para o Carrossel de Banners - Versão corrigida
-        document.addEventListener("DOMContentLoaded", () => {
-            const bannerImage = document.getElementById("carousel-banner-image");
-            const fallbackMessage = document.getElementById("carousel-fallback-message");
-            const prevButton = document.getElementById("carousel-prev");
-            const nextButton = document.getElementById("carousel-next");
-            
-            // URLs das imagens (caminho relativo corrigido)
-            const imagePaths = [
-                "imagens/carrossel/banner1.jpg",
-                "imagens/carrossel/banner2.jpg",
-                "imagens/carrossel/banner3.jpg"
-            ];
-            
-            let loadedBanners = [];
-            let currentBannerIndex = 0;
-            let carouselInterval;
-
-            // Função para mudar o banner
-            const changeBanner = (index) => {
-                bannerImage.style.opacity = 0;
-                setTimeout(() => {
-                    currentBannerIndex = index;
-                    bannerImage.src = loadedBanners[currentBannerIndex];
-                    bannerImage.onload = () => {
-                        bannerImage.style.opacity = 1;
-                    };
-                }, 500);
-            };
-
-            // Função para exibir o próximo banner
-            const showNextBanner = () => {
-                const nextIndex = (currentBannerIndex + 1) % loadedBanners.length;
-                changeBanner(nextIndex);
-            };
-
-            // Função para exibir o banner anterior
-            const showPrevBanner = () => {
-                const prevIndex = (currentBannerIndex - 1 + loadedBanners.length) % loadedBanners.length;
-                changeBanner(prevIndex);
-            };
-
-            // Função para verificar se uma imagem existe
-            const checkImage = (url) => {
-                return new Promise((resolve) => {
-                    const img = new Image();
-                    img.onload = () => resolve(true);
-                    img.onerror = () => resolve(false);
-                    img.src = url;
-                });
-            };
-
-            // Inicializa o carrossel
-            const initCarousel = async () => {
-                try {
-                    // Verifica quais imagens existem
-                    for (const path of imagePaths) {
-                        const exists = await checkImage(path);
-                        console.log(`Verificando imagem ${path}: ${exists ? 'OK' : 'Não encontrada'}`);
-                        if (exists) {
-                            loadedBanners.push(path);
-                        }
-                    }
-
-                    if (loadedBanners.length === 0) {
-                        // Nenhum banner encontrado, exibe a mensagem de fallback
-                        bannerImage.style.display = "none";
-                        prevButton.style.display = "none";
-                        nextButton.style.display = "none";
-                        fallbackMessage.style.display = "flex";
-                        return;
-                    }
-
-                    // Configura os eventos dos botões
-                    nextButton.addEventListener('click', showNextBanner);
-                    prevButton.addEventListener('click', showPrevBanner);
-                    
-                    // Mostra o primeiro banner
-                    bannerImage.src = loadedBanners[currentBannerIndex];
-                    bannerImage.onload = () => {
-                        bannerImage.style.opacity = 1;
-                        fallbackMessage.style.display = "none";
-                    };
-                    
-                    // Inicia a rotação automática
-                    carouselInterval = setInterval(showNextBanner, 5000);
-                    
-                    // Pausa o carrossel quando o mouse está sobre ele
-                    const container = document.getElementById('carousel-container');
-                    container.addEventListener('mouseenter', () => clearInterval(carouselInterval));
-                    container.addEventListener('mouseleave', () => {
-                        carouselInterval = setInterval(showNextBanner, 5000);
-                    });
-                } catch (error) {
-                    console.error('Erro no carrossel:', error);
-                    fallbackMessage.style.display = "flex";
-                }
-            };
-
-            // Inicia o carrossel
-            initCarousel();
-        });
-
-        // Script para verificar transmissão ao vivo
-        document.addEventListener("DOMContentLoaded", () => {
-            const youtubeLiveIframe = document.getElementById("youtube-live");
-            const fallbackMessage = document.getElementById("fallback-message");
-
-            // Apenas mostra o iframe e esconde a mensagem de fallback
-            fallbackMessage.classList.add("hidden");
-            youtubeLiveIframe.style.display = "block";
-        });
-    </script>
-</body>
-</html>
+                        <path d="M.057 24l1.687-6.1
