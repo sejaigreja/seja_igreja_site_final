@@ -1,0 +1,14 @@
+const WordOfPastor = () => (
+  <section className="p-6 bg-white text-center">
+    <h2 className="text-2xl font-bold mb-2">Palavra Pastoral</h2>
+    <p className="mb-2 text-lg">
+      Bem-vindo ao nosso espaço virtual! Esta é uma comunidade onde cada pessoa
+      é acolhida com amor e respeito, e onde a Palavra de Deus é central em
+      tudo o que fazemos. Acreditamos que a igreja não é apenas um prédio, mas
+      sim pessoas que vivem em comunhão com Deus e umas com as outras.
+    </p>
+    <p className="font-semibold">Pastor Sênior Samuel Moura</p>
+  </section>
+);
+
+export default WordOfPastor;

@@ -1,0 +1,15 @@
+const Events = () => (
+  <section className="p-6 bg-white text-center">
+    <h2 className="text-2xl font-bold mb-2">Agenda Semanal</h2>
+    <ul className="space-y-1 text-lg">
+      <li>Domingo 17h – EBD Adolescentes</li>
+      <li>Domingo 18h às 20h – Culto de Louvor e Adoração</li>
+      <li>Quarta-feira – Célula 20h</li>
+      <li>Quinta-feira – Na Mesa – Estudo Bíblico</li>
+      <li>1º Sábado do mês – Parece que foi Ontem – Louvor e Oração</li>
+      <li>3º Sábado Bimestral – Seja Homem</li>
+    </ul>
+  </section>
+);
+
+export default Events;

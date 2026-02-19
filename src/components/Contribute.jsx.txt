@@ -1,0 +1,12 @@
+const Contribute = () => (
+  <section className="p-6 bg-white text-center">
+    <h2 className="text-2xl font-bold mb-2">Contribua</h2>
+    <p>Chave Pix: sejaigreja@pix.com.br</p>
+    <p>Banco: Cora SCFI 403</p>
+    <p>Agência: 0001</p>
+    <p>Conta: 4942756-2</p>
+    <p>CNPJ: 55.198.072/0001-87</p>
+  </section>
+);
+
+export default Contribute;
